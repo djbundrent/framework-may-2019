@@ -6,10 +6,5 @@
     "javascript",
     "javascriptreact",
     "html"
-  ],
-  "standard.options": {
-    "plugins": [
-      "html"
-    ]
-  },
+  ]
 }

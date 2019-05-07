@@ -7,12 +7,6 @@
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },
-  "semistandard": {
-    "plugins": [
-      "html"
-    ],
-    "parser": "babel-eslint"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -20,7 +14,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint-plugin-html": "^5.0.3",
     "semistandard": "^13.0.1"
   }
 }
