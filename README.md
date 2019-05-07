@@ -18,7 +18,7 @@
 https://reactjs.org/
 
 ## Development Setup
-1. Install StandardJs: <https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs>
+1. Install StandardJS: <https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs>
 2. Disable the built-in VSCode validator To do this, set "javascript.validate.enable": false in your VSCode settings.json.
 
 
