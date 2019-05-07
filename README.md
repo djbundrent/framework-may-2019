@@ -1,7 +1,7 @@
 # Week 1
 
 ## Installing Node
-https://nodejs.org/en/
+<https://nodejs.org/en/>
 
 ## What is Node?
 > Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
@@ -16,6 +16,12 @@ https://nodejs.org/en/
 
 ## What Is React
 https://reactjs.org/
+
+## Development Setup
+1. Install StandardJs: <https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs>
+2. Disable the built-in VSCode validator To do this, set "javascript.validate.enable": false in your VSCode settings.json.
+
+
 
 ## Hello World Example
 
@@ -41,7 +47,7 @@ This is the "component" that gets mounted inside of `index.js`. This is going to
 ### JSX
 React does not use standard HTML, it uses something called JSX. It may seem a bit weird at first, but you will get the hang of it quickly.
 
-https://reactjs.org/docs/introducing-jsx.html
+<https://reactjs.org/docs/introducing-jsx.html>
 
 ### Make it say "Hi"
 .... in class
