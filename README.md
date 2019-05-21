@@ -15,7 +15,8 @@ This will blow away all your changes, so if there is something you want to keep 
 ## What are Callback Functions?
 
 Here is a link to a resource for learning more about callback functions
-[Callback Functions] (<https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks)>
+
+[Callback Functions](https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks)
 
 ## ES2015
 
