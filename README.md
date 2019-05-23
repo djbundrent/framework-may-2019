@@ -29,7 +29,7 @@ lot of content, but if you just can't get enough!
 
 ## Lets Get Started!
 
-return to <https://reple.it> to test out ES6 stuffs
+return to <https://repl.it> to test out ES6 stuffs
 
 ```JavaScript
 students = [
