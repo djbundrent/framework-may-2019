@@ -18,10 +18,11 @@ class App extends Component {
   // Class based method to render each person's name and age
   getPeople () {
     let people = this.state.people;
-    return people.map(function (person) {
+    let that = this;
+    return people.map(function (person, index) {
       return (
-        <div key={person.name}>
-          <h2>{person.name}</h2>
+        <div key={index}>
+          <h2>{person.name}</h2> <div onClick={() => {that.deletePerson(index)}}>Delete</div>
           <p>{person.age}</p>
         </div>
       );
@@ -40,11 +41,10 @@ class App extends Component {
     );
   }
 
+  // Method to add a person to the state's people array
   addPerson = (event) => {
     event.preventDefault();
-
     const { people } = this.state;  // non-destructuring way of doing the same thing: const people = this.state.people;
-   
     const person = {
       name: this.state.nameInput,
       age: this.state.ageInput,
@@ -52,6 +52,14 @@ class App extends Component {
 
     people.push(person);
     this.setState({people, nameInput: '', ageInput: ''});
+  }
+
+  // Method to delete a person from the state's people array
+  deletePerson (index) {
+    const { people } = this.state;
+    console.log(`delete was called on people[${index}].`)
+    people.splice(index, 1);
+    this.setState({ people });
   }
 
   // Method to render a div countaining the name and age of the youngest person in the state's people array
