@@ -5,7 +5,6 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
-      greeting: 'We did it!',
       people: [
         { name: 'Alex', age: 21 },
         { name: 'Ben', age: 18 },
@@ -45,7 +44,15 @@ class App extends Component {
   }
 
   render () {
-    return <div>{this.getPeople()}</div>;
+    return (
+    <div>
+      <h1>
+        {this.props.greeting}
+      </h1>
+      <div>
+        {this.getPeople()}
+      </div>
+    </div>);
   }
 }
 
