@@ -3,8 +3,10 @@
 ## Get Caught up
 
 `git checkout -f week5-thur`
+
 `git pull` to get any updates
 
+`npm install` to install `react-router-dom` and its dependencies
 
 ## AJAX and APIs reading
 
