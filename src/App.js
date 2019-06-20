@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import People from './People';
+import AddEditPerson from './AddEditPerson';
 
 class App extends Component {
   // Classes must have constructors if initial variables are to be set automatically
   constructor () {
     super();
     this.state = {
-      nameInput: '',
-      ageInput: '',
       people: [
         { name: 'Alex', age: 21 },
         { name: 'Ben', age: 18 },
@@ -21,50 +21,16 @@ class App extends Component {
     this.setState({ people });
   }
 
-  // Class based method to render each person's name and age
-  getPeople () {
-    let people = this.state.people;
-    let that = this;
-    return people.map(function (person, index) {
-      return (
-        <div key={index}>
-          <h2>{person.name} <div onClick={() => { that.deletePerson(index) }}>delete</div></h2>
-          <p>{person.age}</p>
-        </div>
-      );
-    });
-  }
-
-  addPerson = (event) => {
-    event.preventDefault();
+  addPerson = (name, age) => {
     const { people } = this.state;
-    // const people = this.state.people;
 
     const person = {
-      name: this.state.nameInput,
-      age: this.state.ageInput
+      name: name,
+      age: age
     };
 
     people.push(person);
-    this.setState({ people, nameInput: '', ageInput: '' })
-  }
-
-  renderForm () {
-    return (
-      <form onSubmit={this.addPerson}>
-        <label>Name: </label>
-        <input type="text" id="name" value={this.state.nameInput} onChange={(event) => {
-          this.setState({ nameInput: event.target.value});
-          }}
-        />
-        <label>Age: </label>
-        <input type="text" id="age" value={this.state.ageInput} onChange={(event) => {
-          this.setState({ ageInput: event.target.value});
-          }}
-        />
-        <input type="submit"/>
-      </form>
-    )
+    this.setState({ people })
   }
 
   // Method to render a div countaining the name and age of the youngest person in the state's people array
@@ -88,8 +54,15 @@ class App extends Component {
     return <div>
       <h1>{this.props.greeting}</h1>
       <h2>Add Person: </h2>
-      <div>{this.renderForm()}</div>
-      <div>{this.getPeople()}</div>
+      <div>
+        <AddEditPerson addPerson={this.addPerson.bind(this)} />
+      </div>
+      <div className="people">
+        <People 
+          people = {this.state.people} 
+          deletePerson = {this.deletePerson.bind(this)} 
+        />
+      </div>
     </div>
   }
 }
